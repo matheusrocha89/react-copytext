@@ -2,18 +2,13 @@ import React from "react";
 
 type CopyTextProps = {
   className?: string;
-  copied: boolean;
+  copied?: boolean;
   onClick?: () => void;
   text: string;
 };
 
-const CopyText: React.FC<CopyTextProps> = ({
-  className,
-  text,
-  copied = false,
-  onClick = () => {},
-}) => {
-  return null;
+const CopyText = ({ text }: CopyTextProps) => {
+  return <h1>{text}</h1>;
 };
 
 export { CopyText };
