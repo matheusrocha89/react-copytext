@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #e5e7eb;
+  padding: 8px;
+  border-radius: 4px;
+  color: #1f2937;
+}
+
+.button {
+  background: #2563eb;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
