@@ -8,7 +8,7 @@ export default defineConfig({
     lib: {
       entry: "src/CopyText/index.ts",
       name: "CopyText",
-      fileName: format => `copy-text.${format}.js`,
+      fileName: (format) => `copy-text.${format}.js`,
     },
     rollupOptions: {
       external: ["react", "react-dom"],
