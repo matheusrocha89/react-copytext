@@ -2,8 +2,13 @@
   "name": "react-copytext",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/copy-text.umd.js",
+  "module": "dist/copy-text.es.js",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "build": "vite build",
+    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "format": "prettier --write 'src/**/*.{ts,tsx}'",
     "test": "vitest run",
     "test:watch": "vitest"
   },
