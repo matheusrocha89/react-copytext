@@ -1,5 +1,5 @@
 {
-  "name": "@lazydevs/react-copytext",
+  "name": "@nobrainers/react-copytext",
   "version": "0.0.1",
   "description": "",
   "main": "dist/copy-text.umd.js",

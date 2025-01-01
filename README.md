@@ -1,4 +1,4 @@
-# @lazydevs/react-copytext
+# @nobrainers/react-copytext
 
 ## Table of Contents
 
