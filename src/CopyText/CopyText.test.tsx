@@ -18,6 +18,22 @@ describe("CopyText", () => {
     expect(screen.getByText("Copied")).toBeInTheDocument();
   });
 
+  it("should render the copy icon when showIcon is true", () => {
+    render(<CopyText text="Hello, World!" />);
+    expect(screen.getByTestId("copy-icon")).toBeInTheDocument();
+  });
+
+  it("should render the copied icon when copied is true", () => {
+    render(<CopyText text="Hello, World!" copied />);
+    expect(screen.getByTestId("copied-icon")).toBeInTheDocument();
+  });
+
+  it("should not render any icon when showIcon is false", () => {
+    render(<CopyText text="Hello, World!" showIcon={false} />);
+    expect(screen.queryByTestId("copy-icon")).not.toBeInTheDocument();
+    expect(screen.queryByTestId("copied-icon")).not.toBeInTheDocument();
+  });
+
   describe("behavior", () => {
     beforeEach(() => {
       Object.defineProperty(navigator, "clipboard", {

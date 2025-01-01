@@ -5,17 +5,21 @@ import cx from "classnames";
 import styles from "./CopyText.module.css";
 
 type CopyTextProps = {
+  buttonClassName?: string;
   className?: string;
+  showIcon?: boolean;
   copied?: boolean;
   onClick?: () => void;
   text: string;
 };
 
 const CopyText = ({
+  buttonClassName,
   className,
   text,
   onClick = () => {},
   copied = false,
+  showIcon = true,
 }: CopyTextProps) => {
   const copyText = async () => {
     await navigator.clipboard.writeText(text);
@@ -25,15 +29,15 @@ const CopyText = ({
   return (
     <span className={cx(styles.wrapper, className)}>
       {text}
-      <button className={styles.button} onClick={copyText}>
+      <button className={cx(styles.button, buttonClassName)} onClick={copyText}>
         {copied ? (
           <>
-            <FaCheck />
+            {showIcon && <FaCheck data-testid="copied-icon" />}
             Copied
           </>
         ) : (
           <>
-            <FaRegClipboard />
+            {showIcon && <FaRegClipboard data-testid="copy-icon" />}
             Copy
           </>
         )}
