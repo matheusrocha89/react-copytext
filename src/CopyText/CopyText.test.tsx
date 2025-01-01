@@ -3,6 +3,17 @@ import { render, screen } from "@testing-library/react";
 import { CopyText } from "./CopyText";
 
 describe("CopyText", () => {
+  beforeEach(() => {
+    Object.defineProperty(navigator, "clipboard", {
+      value: { writeText: vi.fn(() => Promise.resolve()) },
+      writable: true,
+    });
+  });
+
+  afterEach(() => {
+    vi.restoreAllMocks();
+  });
+
   it("should render the text", () => {
     render(<CopyText text="Hello, World!" />);
     expect(screen.getByText("Hello, World!")).toBeInTheDocument();
@@ -34,18 +45,20 @@ describe("CopyText", () => {
     expect(screen.queryByTestId("copied-icon")).not.toBeInTheDocument();
   });
 
+  it("should display the copy button label", () => {
+    render(<CopyText text="Hello, World!" copyButtonLabel="Copy me!" />);
+    expect(screen.getByText("Copy me!")).toBeInTheDocument();
+  });
+
+  it("should display the copied button label", async () => {
+    render(
+      <CopyText text="Hello, World!" copied copiedButtonLabel="Copied!" />
+    );
+    await screen.getByRole("button").click();
+    expect(screen.getByText("Copied!")).toBeInTheDocument();
+  });
+
   describe("behavior", () => {
-    beforeEach(() => {
-      Object.defineProperty(navigator, "clipboard", {
-        value: { writeText: vi.fn(() => Promise.resolve()) },
-        writable: true,
-      });
-    });
-
-    afterEach(() => {
-      vi.restoreAllMocks();
-    });
-
     it("should copy the text when the button is clicked", async () => {
       render(<CopyText text="Let's copy text" />);
       await screen.getByText("Copy").click();

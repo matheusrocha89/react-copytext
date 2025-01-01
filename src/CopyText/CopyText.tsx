@@ -8,6 +8,8 @@ type CopyTextProps = {
   buttonClassName?: string;
   className?: string;
   showIcon?: boolean;
+  copyButtonLabel?: string;
+  copiedButtonLabel?: string;
   copied?: boolean;
   onClick?: () => void;
   text: string;
@@ -20,6 +22,8 @@ const CopyText = ({
   onClick = () => {},
   copied = false,
   showIcon = true,
+  copiedButtonLabel = "Copied",
+  copyButtonLabel = "Copy",
 }: CopyTextProps) => {
   const copyText = async () => {
     await navigator.clipboard.writeText(text);
@@ -33,12 +37,12 @@ const CopyText = ({
         {copied ? (
           <>
             {showIcon && <FaCheck data-testid="copied-icon" />}
-            Copied
+            {copiedButtonLabel}
           </>
         ) : (
           <>
             {showIcon && <FaRegClipboard data-testid="copy-icon" />}
-            Copy
+            {copyButtonLabel}
           </>
         )}
       </button>
