@@ -1,10 +1,15 @@
 {
   "name": "@nobrainers/react-copytext",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "No brainer copy text component",
   "main": "dist/copy-text.umd.js",
   "module": "dist/copy-text.es.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "vite build",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
