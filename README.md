@@ -1,4 +1,4 @@
-# React CopyText
+# @lazydevs/react-copytext
 
 ## Table of Contents
 
