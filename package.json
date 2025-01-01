@@ -1,6 +1,6 @@
 {
   "name": "@nobrainers/react-copytext",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "dist/copy-text.umd.js",
   "module": "dist/copy-text.es.js",
