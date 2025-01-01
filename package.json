@@ -1,6 +1,6 @@
 {
   "name": "@nobrainers/react-copytext",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "No brainer copy text component",
   "main": "dist/copy-text.umd.js",
   "module": "dist/copy-text.es.js",
@@ -49,8 +49,8 @@
     "vitest": "^2.1.8"
   },
   "peerDependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": ">=16.8.0 <20.0.0",
+    "react-dom": ">=16.8.0 <20.0.0"
   },
   "lint-staged": {
     "*.ts?(x)": [
