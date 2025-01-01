@@ -117,4 +117,4 @@ function App() {
 
 ## License
 
-[MIT](LICENSE.md)
+[MIT](LICENSE)
