@@ -117,4 +117,4 @@ function App() {
 
 ## License
 
-ISC
+[MIT](LICENSE.md)
