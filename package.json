@@ -1,6 +1,6 @@
 {
   "name": "@nobrainers/react-copytext",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "No brainer copy text component",
   "main": "dist/copy-text.umd.js",
   "module": "dist/copy-text.es.js",
@@ -27,7 +27,8 @@
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "format": "prettier --write 'src/**/*.{ts,tsx}'",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "release": "standard-version"
   },
   "keywords": [
     "copy",
@@ -38,6 +39,8 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
     "@eslint/compat": "^1.2.4",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -47,6 +50,8 @@
     "@types/react-dom": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^8.18.2",
     "@vitejs/plugin-react": "^4.3.4",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.17.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.37.3",
@@ -54,6 +59,7 @@
     "jsdom": "^25.0.1",
     "lint-staged": "^15.3.0",
     "prettier": "^3.4.2",
+    "standard-version": "^9.5.0",
     "typescript": "^5.7.2",
     "vite": "^5.4.11",
     "vite-plugin-dts": "^4.4.0",
@@ -72,5 +78,10 @@
   "dependencies": {
     "classnames": "^2.5.1",
     "react-icons": "^5.4.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }
