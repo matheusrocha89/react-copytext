@@ -80,6 +80,8 @@ npm install react-copytext
 
 ```jsx
 import { CopyText } from "react-copytext";
+// Don't forget to import the styles
+import "react-copytext/dist/style.css";
 
 function App() {
   const [copied, setCopied] = useState(false);
@@ -93,6 +95,12 @@ function App() {
   );
 }
 ```
+
+> ⚠️ **Important**: Make sure to import the CSS file to get the default styling:
+>
+> ```jsx
+> import "react-copytext/dist/style.css";
+> ```
 
 ## Props
 
