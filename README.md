@@ -1,5 +1,10 @@
 # @nobrainers/react-copytext
 
+# Demo
+https://github.com/user-attachments/assets/a5882c1a-441e-4c6a-acb4-f0b611aaca58
+
+
+
 ## Table of Contents
 
 - [Overview](#overview)
