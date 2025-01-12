@@ -1,6 +1,6 @@
 {
   "name": "@nobrainers/react-copytext",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "No brainer copy text component",
   "main": "dist/copy-text.umd.js",
   "module": "dist/copy-text.es.js",
