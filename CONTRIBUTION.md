@@ -117,7 +117,7 @@ Releases are automated using `standard-version` and a custom `release.sh` script
 
 ### **Git Practices**
 
-- Always use Commitizen for commits (`npx cz`).
+- Always use Commitizen for commits (`git commit` will use `npx cz`).
 - Write meaningful commit messages (e.g., `feat: add CopyText component`).
 
 ### **Testing**
