@@ -27,15 +27,7 @@ jobs:
         run: npm run lint
 
       - name: Run Tests
-        run: npm test
-
-      - name: Upload Coverage to Codecov
-        uses: codecov/codecov-action@v3
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          files: ./coverage/lcov.info
-          flags: unittests
-          fail_ci_if_error: true
+        run: npm run test:ci
 
       - name: Build Artifacts
         run: npm run build
@@ -46,15 +38,8 @@ jobs:
           name: dist
           path: dist/
 
-      - name: Run Standard Version
-        env:
-          GIT_AUTHOR_NAME: github-actions
-          GIT_AUTHOR_EMAIL: actions@github.com
-        run: |
-          npm run release
-          git push origin main --follow-tags
-
-      - name: Publish to NPM
+      - name: Run Semantic Release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish --access public
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release
