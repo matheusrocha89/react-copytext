@@ -57,6 +57,11 @@ describe("CopyText", () => {
     expect(screen.getByText("Copied!")).toBeInTheDocument();
   });
 
+  it("should apply textClassName to the text element", () => {
+    render(<CopyText text="Hello" textClassName="custom-text" />);
+    expect(screen.getByText("Hello")).toHaveClass("custom-text");
+  });
+
   describe("behavior", () => {
     it("should copy the text when the button is clicked", async () => {
       render(<CopyText text="Let's copy text" />);
