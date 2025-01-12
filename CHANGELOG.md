@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.9](https://github.com/matheusrocha89/react-copytext/compare/v0.0.6...v0.0.9) (2025-01-12)
+
+
+### Features
+
+* changelog generator ([5539339](https://github.com/matheusrocha89/react-copytext/commit/553933932e1258fcac1204e1624bb29015f5ac64))
+
 ### [0.0.8](https://github.com/matheusrocha89/react-copytext/compare/v0.0.6...v0.0.8) (2025-01-12)
 
 
