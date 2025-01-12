@@ -12,6 +12,7 @@ type CopyTextProps = {
   copied?: boolean;
   onClick?: () => void;
   text: string;
+  textClassName?: string;
 };
 
 const CopyText = ({
@@ -23,6 +24,7 @@ const CopyText = ({
   showIcon = true,
   copiedButtonLabel = "Copied",
   copyButtonLabel = "Copy",
+  textClassName,
 }: CopyTextProps) => {
   const copyText = async () => {
     await navigator.clipboard.writeText(text);
@@ -31,7 +33,7 @@ const CopyText = ({
 
   return (
     <span className={cx(styles.wrapper, className)}>
-      {text}
+      <span className={textClassName}>{text}</span>
       <button className={cx(styles.button, buttonClassName)} onClick={copyText}>
         {copied ? (
           <>
