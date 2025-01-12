@@ -1,4 +1,4 @@
-import react from "eslint-plugin-react";
+import react, { rules } from "eslint-plugin-react";
 import typescriptEslint from "@typescript-eslint/eslint-plugin";
 import reactHooks from "eslint-plugin-react-hooks";
 import { fixupPluginRules } from "@eslint/compat";
@@ -11,30 +11,37 @@ import { FlatCompat } from "@eslint/eslintrc";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const compat = new FlatCompat({
-    baseDirectory: __dirname,
-    recommendedConfig: js.configs.recommended,
-    allConfig: js.configs.all
+  baseDirectory: __dirname,
+  recommendedConfig: js.configs.recommended,
+  allConfig: js.configs.all,
 });
 
-export default [...compat.extends(
+export default [
+  ...compat.extends(
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier",
-), {
+    "prettier"
+  ),
+  {
+    rules: {
+      "react/react-in-jsx-scope": "off",
+      "react/jsx-uses-react": "off",
+    },
     plugins: {
-        react,
-        "@typescript-eslint": typescriptEslint,
-        "react-hooks": fixupPluginRules(reactHooks),
+      react,
+      "@typescript-eslint": typescriptEslint,
+      "react-hooks": fixupPluginRules(reactHooks),
     },
 
     languageOptions: {
-        parser: tsParser,
+      parser: tsParser,
     },
 
     settings: {
-        react: {
-            version: "detect",
-        },
+      react: {
+        version: "detect",
+      },
     },
-}];
+  },
+];
