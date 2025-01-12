@@ -1,3 +1,10 @@
+# [0.1.0](https://github.com/matheusrocha89/react-copytext/compare/v0.0.15...v0.1.0) (2025-01-12)
+
+
+### Features
+
+* trigger deploy ([1edffb6](https://github.com/matheusrocha89/react-copytext/commit/1edffb6a094059dab10b265e64d3a1a1e7db3953))
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
