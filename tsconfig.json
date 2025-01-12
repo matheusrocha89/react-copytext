@@ -1,15 +1,19 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "ES2018",
     "module": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "jsx": "react-jsx",
     "declaration": true,
     "declarationMap": true,
-    "moduleResolution": "Node",
-    "jsx": "react",
+    "sourceMap": true,
     "outDir": "dist",
     "strict": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "types": ["vitest/globals", "@testing-library/jest-dom"]
   },
   "include": ["src"],

@@ -1,4 +1,3 @@
-import React from "react";
 import { FaRegClipboard, FaCheck } from "react-icons/fa6";
 import cx from "classnames";
 

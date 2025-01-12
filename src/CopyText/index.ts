@@ -1,2 +1,2 @@
-export * from "./CopyText";
-export type * from "./CopyText";
+export { CopyText } from "./CopyText";
+export type { CopyTextProps } from "./CopyText";

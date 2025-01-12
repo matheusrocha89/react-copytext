@@ -1,4 +1,4 @@
-import react, { rules } from "eslint-plugin-react";
+import react from "eslint-plugin-react";
 import typescriptEslint from "@typescript-eslint/eslint-plugin";
 import reactHooks from "eslint-plugin-react-hooks";
 import { fixupPluginRules } from "@eslint/compat";
