@@ -61,9 +61,7 @@
   },
   "peerDependencies": {
     "react": ">=18.0.0",
-    "react-dom": ">=18.0.0",
-    "react-icons": ">=4.0.0",
-    "classnames": ">=2.0.0"
+    "react-dom": ">=18.0.0"
   },
   "lint-staged": {
     "*.ts?(x)": [
