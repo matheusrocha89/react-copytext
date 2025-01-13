@@ -54,6 +54,7 @@ React CopyText is a React component that allows users to easily copy text to the
   text="Copy this text"
   className="custom-wrapper"
   buttonClassName="custom-button"
+  textClassName="custom-text"
 />
 ```
 
@@ -115,6 +116,7 @@ function App() {
 | `onClick`           | function | `() => {}` | Callback function called after text is copied |
 | `buttonClassName`   | string   | -          | Additional CSS class for the button           |
 | `className`         | string   | -          | Additional CSS class for the wrapper          |
+| `textClassName`     | string   | -          | Additional CSS class for the text element     |
 | `showIcon`          | boolean  | `true`     | Whether to show copy/copied icons             |
 | `copyButtonLabel`   | string   | "Copy"     | Label for the copy button                     |
 | `copiedButtonLabel` | string   | "Copied"   | Label for the copied state                    |
