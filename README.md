@@ -78,7 +78,7 @@ A simple and customizable React component for copying text to the clipboard.
 ## Installation
 
 ```bash
-npm install react-copytext
+npm install @nobrainers/react-copytext
 ```
 
 ## Usage
