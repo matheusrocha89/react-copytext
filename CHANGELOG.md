@@ -1,3 +1,10 @@
+# [0.2.0](https://github.com/matheusrocha89/react-copytext/compare/v0.1.0...v0.2.0) (2025-01-15)
+
+
+### Features
+
+* **copytext.tsx:** custom icons ([ae67536](https://github.com/matheusrocha89/react-copytext/commit/ae6753607fa8f414879a45d34d0324f248763acd))
+
 # [0.1.0](https://github.com/matheusrocha89/react-copytext/compare/v0.0.15...v0.1.0) (2025-01-12)
 
 
