@@ -13,6 +13,8 @@ type CopyTextProps = {
   onClick?: () => void;
   text: string;
   textClassName?: string;
+  copyIcon?: React.ElementType;
+  copiedIcon?: React.ElementType;
 };
 
 const CopyText = ({
@@ -25,11 +27,15 @@ const CopyText = ({
   copiedButtonLabel = "Copied",
   copyButtonLabel = "Copy",
   textClassName,
+  copyIcon,
+  copiedIcon,
 }: CopyTextProps) => {
   const copyText = async () => {
     await navigator.clipboard.writeText(text);
     onClick();
   };
+  const CopyIcon = copyIcon || FaRegClipboard;
+  const CopiedIcon = copiedIcon || FaCheck;
 
   return (
     <span className={cx(styles.wrapper, className)}>
@@ -37,12 +43,12 @@ const CopyText = ({
       <button className={cx(styles.button, buttonClassName)} onClick={copyText}>
         {copied ? (
           <>
-            {showIcon && <FaCheck data-testid="copied-icon" />}
+            {showIcon && <CopiedIcon data-testid="copied-icon" />}
             {copiedButtonLabel}
           </>
         ) : (
           <>
-            {showIcon && <FaRegClipboard data-testid="copy-icon" />}
+            {showIcon && <CopyIcon data-testid="copy-icon" />}
             {copyButtonLabel}
           </>
         )}
