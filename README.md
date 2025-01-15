@@ -13,6 +13,7 @@ https://github.com/user-attachments/assets/a5882c1a-441e-4c6a-acb4-f0b611aaca58
   - [Without Icons](#without-icons)
   - [With Custom Styling](#with-custom-styling)
   - [With Copy Feedback](#with-copy-feedback)
+  - [With Custom Icons](#with-custom-icons)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Props](#props)
@@ -73,6 +74,17 @@ const [copied, setCopied] = useState(false);
 />;
 ```
 
+### With Custom Icons
+
+> Note: You can use icons from any package. This example uses Feather icons (`react-icons/fi`),
+> while the default icons come from Font Awesome (`react-icons/fa6`).
+
+```jsx
+import { FiCopy, FiCheck } from "react-icons/fi";
+
+<CopyText text="Copy this text" copyIcon={FiCopy} copiedIcon={FiCheck} />;
+```
+
 A simple and customizable React component for copying text to the clipboard.
 
 ## Installation
@@ -109,17 +121,19 @@ function App() {
 
 ## Props
 
-| Prop                | Type     | Default    | Description                                   |
-| ------------------- | -------- | ---------- | --------------------------------------------- |
-| `text`              | string   | (required) | The text to be copied                         |
-| `copied`            | boolean  | `false`    | Indicates if the text has been copied         |
-| `onClick`           | function | `() => {}` | Callback function called after text is copied |
-| `buttonClassName`   | string   | -          | Additional CSS class for the button           |
-| `className`         | string   | -          | Additional CSS class for the wrapper          |
-| `textClassName`     | string   | -          | Additional CSS class for the text element     |
-| `showIcon`          | boolean  | `true`     | Whether to show copy/copied icons             |
-| `copyButtonLabel`   | string   | "Copy"     | Label for the copy button                     |
-| `copiedButtonLabel` | string   | "Copied"   | Label for the copied state                    |
+| Prop                | Type              | Default        | Description                                   |
+| ------------------- | ----------------- | -------------- | --------------------------------------------- |
+| `text`              | string            | (required)     | The text to be copied                         |
+| `copied`            | boolean           | `false`        | Indicates if the text has been copied         |
+| `onClick`           | function          | `() => {}`     | Callback function called after text is copied |
+| `buttonClassName`   | string            | -              | Additional CSS class for the button           |
+| `className`         | string            | -              | Additional CSS class for the wrapper          |
+| `textClassName`     | string            | -              | Additional CSS class for the text element     |
+| `showIcon`          | boolean           | `true`         | Whether to show copy/copied icons             |
+| `copyButtonLabel`   | string            | "Copy"         | Label for the copy button                     |
+| `copiedButtonLabel` | string            | "Copied"       | Label for the copied state                    |
+| `copyIcon`          | React.ElementType | FaRegClipboard | Custom icon for copy state                    |
+| `copiedIcon`        | React.ElementType | FaCheck        | Custom icon for copied state                  |
 
 ## Features
 
