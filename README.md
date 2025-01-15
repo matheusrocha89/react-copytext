@@ -76,6 +76,9 @@ const [copied, setCopied] = useState(false);
 
 ### With Custom Icons
 
+> Note: You can use icons from any package. This example uses Feather icons (`react-icons/fi`),
+> while the default icons come from Font Awesome (`react-icons/fa6`).
+
 ```jsx
 import { FiCopy, FiCheck } from "react-icons/fi";
 
