@@ -62,6 +62,36 @@ describe("CopyText", () => {
     expect(screen.getByText("Hello")).toHaveClass("custom-text");
   });
 
+  it("should render custom copyIcon when provided", () => {
+    const CustomIcon = () => <span data-testid="custom-copy-icon">Custom</span>;
+    render(<CopyText text="Hello" copyIcon={CustomIcon} />);
+    expect(screen.getByTestId("custom-copy-icon")).toBeInTheDocument();
+    expect(screen.getByText("Custom")).toBeInTheDocument();
+  });
+
+  it("should render custom copiedIcon when provided and copied is true", () => {
+    const CustomIcon = () => (
+      <span data-testid="custom-copied-icon">Custom</span>
+    );
+    render(<CopyText text="Hello" copiedIcon={CustomIcon} copied />);
+    expect(screen.getByTestId("custom-copied-icon")).toBeInTheDocument();
+    expect(screen.getByText("Custom")).toBeInTheDocument();
+  });
+
+  it("should not render custom icons when showIcon is false", () => {
+    const CustomIcon = () => <span data-testid="custom-icon">Custom</span>;
+    render(
+      <CopyText
+        text="Hello"
+        copyIcon={CustomIcon}
+        copiedIcon={CustomIcon}
+        showIcon={false}
+      />
+    );
+    expect(screen.queryByTestId("custom-icon")).not.toBeInTheDocument();
+    expect(screen.queryByText("Custom")).not.toBeInTheDocument();
+  });
+
   describe("behavior", () => {
     it("should copy the text when the button is clicked", async () => {
       render(<CopyText text="Let's copy text" />);
